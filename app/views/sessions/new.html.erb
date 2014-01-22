@@ -1,18 +1,21 @@
+<div class="col-md-6 col-md-offset-3">
 <h3>Fazer login</h3>
 
 <%= form_tag session_path, method: :post do %>
 
-  <div>
+  <div class="form-group">
     <%= label_tag "session[email]", "Digite seu e-mail" %>
-    <%= text_field_tag  "session[email]" %>
+    <%= text_field_tag  "session[email]", "", class: "form-control" %>
   </div>
   
-  <div>
+  <div class="form-group">
     <%= label_tag "session[password]", "Sua senha"%>
-    <%= password_field_tag "session[password]" %>
+    <%= password_field_tag "session[password]", "", class: "form-control" %>
   </div>
   
-  <%= submit_tag "Login" %>
+  <%= submit_tag "Login", class: "btn btn-lg btn-primary" %>
 
 
 <% end %>
+
+</div>

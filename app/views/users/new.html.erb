@@ -3,28 +3,28 @@
 <h3>Novo usuário</h3>
 
 <%= form_for @user do |f| %>
-  <div>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name%>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
   
-  <div>
-    <%= f.label :email %><br/>
-    <%= f.email_field :email %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
   
-  <div>
-    <%= f.label :password %><br/>
-    <%= f.password_field :password %>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
   </div>
   
-  <div>
-    <%= f.label :cpf %><br/>
-    <%= f.text_field :cpf %>
+  <div class="form-group">
+    <%= f.label :cpf %>
+    <%= f.text_field :cpf, class: "form-control" %>
   </div>
   
   
   
-  <%= f.submit "Criar conta"%>
+  <%= f.submit "Criar conta", class: "btn btn-default"%>
   
 <% end %>
