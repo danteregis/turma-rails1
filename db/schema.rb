@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121000511) do
+ActiveRecord::Schema.define(version: 20140122203908) do
+
+  create_table "poker_tables", force: true do |t|
+    t.integer  "small_blind"
+    t.integer  "big_blind"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
