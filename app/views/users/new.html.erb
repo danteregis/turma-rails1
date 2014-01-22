@@ -1,0 +1,30 @@
+<!-- app/views/users/new.html.erb -->
+
+<h3>Novo usuário</h3>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name%>
+  </div>
+  
+  <div>
+    <%= f.label :email %><br/>
+    <%= f.email_field :email %>
+  </div>
+  
+  <div>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </div>
+  
+  <div>
+    <%= f.label :cpf %><br/>
+    <%= f.text_field :cpf %>
+  </div>
+  
+  
+  
+  <%= f.submit "Criar conta"%>
+  
+<% end %>

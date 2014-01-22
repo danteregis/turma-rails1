@@ -1,0 +1,18 @@
+<h3>Fazer login</h3>
+
+<%= form_tag session_path, method: :post do %>
+
+  <div>
+    <%= label_tag "session[email]", "Digite seu e-mail" %>
+    <%= text_field_tag  "session[email]" %>
+  </div>
+  
+  <div>
+    <%= label_tag "session[password]", "Sua senha"%>
+    <%= password_field_tag "session[password]" %>
+  </div>
+  
+  <%= submit_tag "Login" %>
+
+
+<% end %>

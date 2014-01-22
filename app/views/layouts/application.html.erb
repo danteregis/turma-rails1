@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PokerGalaxies</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <!-- A PARTIR DAQUI -->
+  <h1>PokerGalaxies</h1><small>O melhor poker da galáxia</small>
+  <hr/>
+  <span style="color: yellow;"><%= flash[:notice] %></span>
+  <span style="color: red"><%= flash[:error] %></span>
+
+  <%= yield %>
+
+</body>
+</html>
