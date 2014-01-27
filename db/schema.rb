@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121000511) do
+ActiveRecord::Schema.define(version: 20140123003251) do
+
+  create_table "poker_tables", force: true do |t|
+    t.string   "name"
+    t.integer  "big_blind"
+    t.integer  "small_blind"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -20,8 +28,10 @@ ActiveRecord::Schema.define(version: 20140121000511) do
     t.string   "cpf"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "poker_table_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"
+  add_index "users", ["poker_table_id"], name: "index_users_on_poker_table_id"
 
 end

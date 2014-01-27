@@ -1,0 +1,24 @@
+<!-- app/views/poker_tables/new.html.erb -->
+
+<%= form_for @poker_table do |f| %>
+
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :big_blind %>
+  <%= f.text_field :big_blind, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :small_blind %>
+  <%= f.text_field :small_blind, class: "form-control" %>
+</div>
+
+<div class="form-group">
+<%= f.submit "Criar mesa de jogo", class: "btn btn-primary btn-justify" %>
+</div>
+
+<% end %>

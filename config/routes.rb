@@ -6,6 +6,8 @@ Poker::Application.routes.draw do
   
   resource :session
   
+  resources :poker_tables
+  
   root 'welcome#home'
   
   # You can have the root of your site routed with "root"

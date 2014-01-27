@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   #validates_confirmation_of :password
   
   #validates :email, presence: true, uniqueness: true
+  
+  belongs_to :poker_table, inverse_of: :users
+  
+  
 end

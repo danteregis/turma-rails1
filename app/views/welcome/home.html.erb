@@ -1,5 +1,23 @@
 <!-- /app/views/welcome/home.html.erb -->
 
-<h3>Bem vindo ao PokerGalaxies</h3>
+<h3>
+  Bem vindo ao PokerGalaxies
 
-Para partipar desta vibrante comunidade de poker online, <%= link_to "registre-se aqui", new_user_path %>.
+  <%= ", " + @current_user.name if @current_user %>
+
+  
+</h3>
+
+<% unless @current_user %>
+    Para partipar desta vibrante comunidade de poker online, <%= link_to "registre-se aqui", new_user_path %>.
+
+
+    <%= link_to "Fazer login", new_session_path, class: "btn btn-primary" %>
+    
+<% else %>
+
+Muito obrigado por logar aqui. 
+
+<%= link_to "Fazer logoff", session_path, method: :delete %>
+
+<% end %>

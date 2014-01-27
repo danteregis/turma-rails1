@@ -2,19 +2,48 @@
 <html>
 <head>
   <title>PokerGalaxies</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
+  <style type="text/css" media="screen">
+    body {
+      padding-top: 70px;rd
+    }
+  </style>
 </head>
 <body>
   
+  
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Poker Galaxies</a>
+      </div>
+      
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Início</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
   <!-- A PARTIR DAQUI -->
-  <h1>PokerGalaxies</h1><small>O melhor poker da galáxia</small>
-  <hr/>
-  <span style="color: yellow;"><%= flash[:notice] %></span>
-  <span style="color: red"><%= flash[:error] %></span>
+  <div class="container">
+    <% unless flash[:notice].blank? %>
+      <div class="alert alert-info"><%= flash[:notice]%></div>
+    <% end %>
+    
+    <% unless flash[:error].blank? %>
+      <div class="alert alert-danger"><%= flash[:error]%></div>
+    <% end %>
+    
+    <%= yield %>
+  </div>
 
-  <%= yield %>
-
+  
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>
 </html>

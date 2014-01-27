@@ -1,0 +1,29 @@
+<!-- app/views/poker_tables/index.html.erb -->
+
+<h1>
+  Mesas Abertas
+  <small>
+    <%= link_to "Nova Mesa",  new_poker_table_path %>
+  </small>
+</h1>
+
+<hr/>
+
+<table class="table table-stripped">
+  <tr>
+    <th>Nome da Mesa</th>
+    <th>Blinds</th>
+    <th></th>
+  </tr>
+  
+  <% @poker_tables.each do |table| %>
+  
+    <tr>
+      <td><%= table.name %></td>
+      <td> <%= table.small_blind %> / <%= table.big_blind %> </td>
+      <td> <%= link_to "Entrar", table %> </td>
+    </tr>
+  
+  <% end %>
+  
+</table>
