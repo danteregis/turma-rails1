@@ -17,6 +17,20 @@ class PokerTablesController < ApplicationController
     end
   end
   
+  def edit
+    @poker_table = PokerTable.find(params[:id])
+  end
+  
+  def update
+    @poker_table = PokerTable.find(params[:id])
+    if @poker_table.update(poker_table_params)
+      redirect_to poker_tables_path, notice: "Tudo OK!"
+    else
+      flash[:error] = "Erro ao editar"
+      render :edit
+    end
+  end
+  
   
   def show
   end
