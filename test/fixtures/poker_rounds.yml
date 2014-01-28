@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poker_table_id: 1
+  current_status: MyString
+  current_player_id: 1
+  last_raiser: 1
+  dealer: 1
+  card_deck: MyString
+
+two:
+  poker_table_id: 1
+  current_status: MyString
+  current_player_id: 1
+  last_raiser: 1
+  dealer: 1
+  card_deck: MyString

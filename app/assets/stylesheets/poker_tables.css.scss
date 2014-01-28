@@ -1,3 +1,87 @@
-// Place all the styles related to the PokerTables controller here.
+// Place all the styles related to the PokerTable controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$diamonds-top-offset: 22px;
+$first-card-offset: 40px;
+$each-card-offset: 66px;
+
+#poker-table {
+  background: url(/assets/fundo_poker.jpg);
+}
+
+.card {
+  background: url(/assets/card-deck.jpg);
+  background-size: 1000px auto;
+  width: 63px;
+  height: 89px;
+  display: block;
+}
+
+.diamonds-suit {
+  background-position-y: -$diamonds-top-offset;
+}
+
+.hearts-suit {
+  background-position-y: -208px;
+}
+
+.clubs-suit {
+  background-position-y: -115px;
+}
+
+.spades-suit {
+  background-position-y: -300px;
+}
+
+.face-2 {
+  background-position-x: -$first-card-offset;
+}
+
+.face-3 {
+  background-position-x: -($first-card-offset + $each-card-offset*1);
+}
+
+.face-4 {
+  background-position-x: -($first-card-offset + $each-card-offset*2);
+}
+
+.face-5 {
+  background-position-x: -($first-card-offset + $each-card-offset*3);
+}
+
+.face-6 {
+  background-position-x: -($first-card-offset + $each-card-offset*4);
+}
+
+.face-7 {
+  background-position-x: -($first-card-offset + $each-card-offset*5);
+}
+
+.face-8 {
+  background-position-x: -($first-card-offset + $each-card-offset*6);
+}
+
+.face-9 {
+  background-position-x: -($first-card-offset + $each-card-offset*7);
+}
+
+.face-T {
+  background-position-x: -($first-card-offset + $each-card-offset*8);
+}
+
+.face-J {
+  background-position-x: -($first-card-offset + $each-card-offset*9);
+}
+
+.face-Q {
+  background-position-x: -($first-card-offset + $each-card-offset*10);
+}
+
+.face-K {
+  background-position-x: -($first-card-offset + $each-card-offset*11);
+}
+
+.face-A {
+  background-position-x: -($first-card-offset + $each-card-offset*12);
+}
