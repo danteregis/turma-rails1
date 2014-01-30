@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: poker_rounds
+#
+#  id                   :integer          not null, primary key
+#  poker_table_id       :integer
+#  current_status       :string(255)
+#  current_player_id    :integer
+#  last_raiser          :integer
+#  dealer               :integer
+#  card_deck_serialized :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  password       :string(255)
+#  email          :string(255)
+#  cpf            :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  poker_table_id :integer
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
